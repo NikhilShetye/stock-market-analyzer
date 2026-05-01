@@ -1,58 +1,74 @@
-# 📈 Stock Market Analyzer
+# 📈 AI Stock Analyzer
 
-A Python-based data analysis project that analyzes stock market data and generates basic trading signals.
+An end-to-end stock analysis and prediction system built using **Pandas, Machine Learning, and FastAPI**, designed for real-world fintech applications.
 
 ---
 
 ## 🚀 Features
 
-* 📊 Analyze stock performance (max, min, average)
-* 📉 Calculate daily returns and volatility
+* 📊 Stock data analysis (max, min, volatility)
+* 📉 Daily return calculation
 * 📈 Moving average trend detection
-* 🤖 Generate BUY/SELL signals
+* 🤖 ML-based price prediction
+* 🌐 REST API for integration (Android-ready)
 
 ---
 
-## 🛠️ Tech Stack
+## 🧠 Tech Stack
 
 * Python
-* Pandas
-* NumPy
+* Pandas & NumPy
+* Scikit-learn (Linear Regression)
+* FastAPI
 
 ---
 
-## 📂 Project Structure
+## 📡 API Endpoints
 
-```
-stock-market-analyzer/
-```
+| Endpoint    | Description            |
+| ----------- | ---------------------- |
+| `/analysis` | Returns stock insights |
+| `/predict`  | Predicts next price    |
 
 ---
 
-## ▶️ How to Run
+## ▶️ Run Locally
 
 ```bash
 pip install -r requirements.txt
-python main.py
+uvicorn app.main:app --reload
 ```
 
 ---
 
 ## 📊 Sample Output
 
-* Highest Closing Price
-* Volatility
-* Best/Worst trading day
-* Buy/Sell signals
+```json
+{
+  "max_close": 2850.5,
+  "min_close": 1200.3,
+  "avg_close": 2100.7,
+  "volatility": 0.018
+}
+```
 
 ---
 
-## 🔥 Future Improvements
+## 🔮 Prediction Example
 
-* Add multiple stocks comparison
-* Add visualization (charts)
-* Integrate with mobile app
-* Add ML model for prediction
+```json
+{
+  "predicted_price": 2750.23
+}
+```
+
+---
+
+## 📱 Future Scope
+
+* Android app integration
+* Real-time stock API
+* Advanced ML models (LSTM)
 
 ---
 
